@@ -14,6 +14,7 @@ namespace MergeSorting
             Random random = new Random();
 
             Console.WriteLine("Original array elements:");
+            
             for (int i = 0; i < 10; i++)
             {
                 unsorted.Add(random.Next(0, 100));
@@ -24,6 +25,7 @@ namespace MergeSorting
             sorted = MergeSort(unsorted);
 
             Console.WriteLine("Sorted array elements: ");
+            
             foreach (int x in sorted)
             {
                 Console.Write(x + " ");
@@ -40,10 +42,12 @@ namespace MergeSorting
             List<int> right = new List<int>();
 
             int middle = unsorted.Count / 2;
+            
             for (int i = 0; i < middle; i++)
             {
                 left.Add(unsorted[i]);
             }
+            
             for (int i = middle; i < unsorted.Count; i++)
             {
                 right.Add(unsorted[i]);
